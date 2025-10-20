@@ -43,12 +43,12 @@
             this.txtStudentNo = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtAge = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtContactNo = new System.Windows.Forms.TextBox();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.cmbProgram = new System.Windows.Forms.ComboBox();
+            this.txtMI = new System.Windows.Forms.TextBox();
+            this.dateBirth = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -154,23 +154,25 @@
             // 
             this.btnRecords.BackColor = System.Drawing.Color.Pink;
             this.btnRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecords.Location = new System.Drawing.Point(276, 252);
+            this.btnRecords.Location = new System.Drawing.Point(278, 193);
             this.btnRecords.Name = "btnRecords";
-            this.btnRecords.Size = new System.Drawing.Size(75, 27);
+            this.btnRecords.Size = new System.Drawing.Size(75, 37);
             this.btnRecords.TabIndex = 9;
             this.btnRecords.Text = "Records";
             this.btnRecords.UseVisualStyleBackColor = false;
+            this.btnRecords.Click += new System.EventHandler(this.btnRecords_Click);
             // 
             // btnRegis
             // 
             this.btnRegis.BackColor = System.Drawing.Color.Pink;
             this.btnRegis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegis.Location = new System.Drawing.Point(276, 219);
+            this.btnRegis.Location = new System.Drawing.Point(278, 236);
             this.btnRegis.Name = "btnRegis";
-            this.btnRegis.Size = new System.Drawing.Size(75, 27);
+            this.btnRegis.Size = new System.Drawing.Size(75, 37);
             this.btnRegis.TabIndex = 10;
             this.btnRegis.Text = "Register";
             this.btnRegis.UseVisualStyleBackColor = false;
+            this.btnRegis.Click += new System.EventHandler(this.btnRegis_Click);
             // 
             // txtStudentNo
             // 
@@ -193,49 +195,66 @@
             this.txtAge.Size = new System.Drawing.Size(133, 20);
             this.txtAge.TabIndex = 13;
             // 
-            // textBox1
+            // txtFirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(361, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 20);
-            this.textBox1.TabIndex = 14;
+            this.txtFirstName.Location = new System.Drawing.Point(361, 88);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(133, 20);
+            this.txtFirstName.TabIndex = 14;
             // 
-            // textBox2
+            // txtContactNo
             // 
-            this.textBox2.Location = new System.Drawing.Point(427, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 20);
-            this.textBox2.TabIndex = 15;
+            this.txtContactNo.Location = new System.Drawing.Point(427, 152);
+            this.txtContactNo.Name = "txtContactNo";
+            this.txtContactNo.Size = new System.Drawing.Size(169, 20);
+            this.txtContactNo.TabIndex = 15;
             // 
-            // comboBox1
+            // cmbGender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(361, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 21);
-            this.comboBox1.TabIndex = 16;
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.cmbGender.Location = new System.Drawing.Point(361, 121);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(133, 21);
+            this.cmbGender.TabIndex = 16;
             // 
-            // comboBox2
+            // cmbProgram
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(361, 61);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(235, 21);
-            this.comboBox2.TabIndex = 17;
+            this.cmbProgram.FormattingEnabled = true;
+            this.cmbProgram.Items.AddRange(new object[] {
+            "BS in Computer Science ",
+            "BS in Computer Engineering ",
+            "BS in Information Technology ",
+            "BS in Business Administration ",
+            "BS in Accountancy ",
+            "BS in Accounting Information System ",
+            "BS in Retail Technology and Consumer Science ",
+            "BS in Hospitality Management ",
+            "BS in Tourism Management ",
+            "Bachelor of Multimedia Arts ",
+            "BS in Psychology ",
+            "Bachelor in Secondary Education ",
+            "Bachelor in Elementary Education "});
+            this.cmbProgram.Location = new System.Drawing.Point(361, 61);
+            this.cmbProgram.Name = "cmbProgram";
+            this.cmbProgram.Size = new System.Drawing.Size(235, 21);
+            this.cmbProgram.TabIndex = 17;
             // 
-            // textBox3
+            // txtMI
             // 
-            this.textBox3.Location = new System.Drawing.Point(549, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(47, 20);
-            this.textBox3.TabIndex = 18;
+            this.txtMI.Location = new System.Drawing.Point(549, 88);
+            this.txtMI.Name = "txtMI";
+            this.txtMI.Size = new System.Drawing.Size(47, 20);
+            this.txtMI.TabIndex = 18;
             // 
-            // dateTimePicker1
+            // dateBirth
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 152);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(192, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.dateBirth.Location = new System.Drawing.Point(113, 152);
+            this.dateBirth.Name = "dateBirth";
+            this.dateBirth.Size = new System.Drawing.Size(192, 20);
+            this.dateBirth.TabIndex = 19;
             // 
             // FrmRegistration
             // 
@@ -243,12 +262,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(608, 289);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateBirth);
+            this.Controls.Add(this.txtMI);
+            this.Controls.Add(this.cmbProgram);
+            this.Controls.Add(this.cmbGender);
+            this.Controls.Add(this.txtContactNo);
+            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtStudentNo);
@@ -286,11 +305,11 @@
         private System.Windows.Forms.TextBox txtStudentNo;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtAge;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtContactNo;
+        private System.Windows.Forms.ComboBox cmbGender;
+        private System.Windows.Forms.ComboBox cmbProgram;
+        private System.Windows.Forms.TextBox txtMI;
+        private System.Windows.Forms.DateTimePicker dateBirth;
     }
 }

@@ -69,6 +69,7 @@
             this.btnReg.TabIndex = 2;
             this.btnReg.Text = "Register";
             this.btnReg.UseVisualStyleBackColor = false;
+            this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
             // 
             // openFileDialog1
             // 
@@ -79,7 +80,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(426, 292);
+            this.ClientSize = new System.Drawing.Size(411, 292);
             this.Controls.Add(this.btnReg);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.lvShowText);
