@@ -41,6 +41,7 @@ namespace ReadingFile
         private void btnOpen_Click(object sender, EventArgs e)
         {
             DisplayToList(); //call the method
+            
         }
 
         private void btnReg_Click(object sender, EventArgs e)
@@ -48,7 +49,7 @@ namespace ReadingFile
             FrmRegistration reg = new FrmRegistration(); //create an instance of FrmRegistration
             reg.ShowDialog(); //show the registration form as a dialog
 
-            this.Hide(); //hide the current form
+           
         }
     }
     

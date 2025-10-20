@@ -26,7 +26,7 @@ namespace ReadingFile
         {
             FrmRegistration reg = new FrmRegistration(); //create an instance of FrmRegistration
             reg.ShowDialog(); //show the registration form as a dialog
-            Close(); //close the current form
+            
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -53,10 +53,12 @@ namespace ReadingFile
             }
         }
 
+
         private void btnUpload_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Successfully Uploaded!");
             lvRecord.Items.Clear(); //clear the listview after upload
+            this.Hide();
         }
     }
 }

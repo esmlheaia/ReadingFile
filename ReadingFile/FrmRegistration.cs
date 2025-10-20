@@ -31,6 +31,8 @@ namespace ReadingFile
             list[5] = "Birthday: " + dateBirth.Value.ToString("yyyy-MM-dd");
             list[6] = "Contact No.: " + txtContactNo.Text;
 
+            
+
 
         }
 
@@ -39,7 +41,7 @@ namespace ReadingFile
             FrmStudentRecord record = new FrmStudentRecord(); //create an instance of FrmStudentRecord
             record.ShowDialog(); //show the student record form as a dialog
 
-            this.Hide(); //hide the current form
+           
         }
     }
 }
