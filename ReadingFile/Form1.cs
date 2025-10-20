@@ -20,10 +20,10 @@ namespace ReadingFile
         }
         public void DisplayToList()
         {
-            openFileDialog1.InitialDirectory = @"C:\"; 
-            openFileDialog1.Title = "Browse Text Files"; 
+            openFileDialog1.InitialDirectory = @"C:\"; //set initial directory
+            openFileDialog1.Title = "Browse Text Files";  //set dialog title
             openFileDialog1.DefaultExt = "txt"; //default file extension
-            openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"; 
+            openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"; //file filter
             openFileDialog1.ShowDialog(); //open dialog
             String path = openFileDialog1.FileName;
             using (StreamReader streamReader = File.OpenText(path)) //read the file

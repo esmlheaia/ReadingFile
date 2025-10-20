@@ -29,34 +29,34 @@ namespace ReadingFile
             
         }
 
-        private void btnFind_Click(object sender, EventArgs e)
+        private void btnFind_Click(object sender, EventArgs e) 
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            OpenFileDialog openFileDialog1 = new OpenFileDialog(); 
             openFileDialog1.InitialDirectory = @"C:\";
             openFileDialog1.Title = "Find Student Record";
             openFileDialog1.DefaultExt = "txt";
             openFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
 
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) //open dialog
             {
                 String path = openFileDialog1.FileName;
                 lvRecord.Items.Clear();
 
-                using (StreamReader reader = new StreamReader(path))
+                using (StreamReader reader = new StreamReader(path)) //read the file
                 {
                     string line;
-                    while ((line = reader.ReadLine()) != null)
+                    while ((line = reader.ReadLine()) != null) //read line by line
                     {
-                        lvRecord.Items.Add(line);
+                        lvRecord.Items.Add(line); //display the text to listview
                     }
                 }
             }
         }
 
 
-        private void btnUpload_Click(object sender, EventArgs e)
+        private void btnUpload_Click(object sender, EventArgs e) //upload button
         {
-            MessageBox.Show("Successfully Uploaded!");
+            MessageBox.Show("Successfully Uploaded!"); //   show message box
             lvRecord.Items.Clear(); //clear the listview after upload
             this.Hide();
         }

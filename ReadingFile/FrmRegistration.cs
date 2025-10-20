@@ -31,9 +31,6 @@ namespace ReadingFile
             list[5] = "Birthday: " + dateBirth.Value.ToString("yyyy-MM-dd");
             list[6] = "Contact No.: " + txtContactNo.Text;
 
-            
-
-
         }
 
         private void btnRecords_Click(object sender, EventArgs e)
